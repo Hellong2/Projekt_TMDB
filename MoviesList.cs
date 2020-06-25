@@ -69,6 +69,9 @@ namespace Projekt_TMDB
             return ListaFilmow.Where(p => p.Release == date).
                 OrderBy(p => p.Title).ToList();
         }
+        //Summary
+        //Obliczanie zysku dla każdego filmu (income-budget)
+        
         //public static decimal Profit(string company)
         //{
         //    List<MoviesList> filmy = All.Where(f )
@@ -79,6 +82,16 @@ namespace Projekt_TMDB
 
         //}
 
+        //Summary
+        //Rozdzielanie stringów Company, Genre, Tag na osobne słowniki, relacja klucz główny-klucz obcy z Filmem
 
-    }
+        //Dictionary<string, string> dictionary = new Dictionary<string, string>();
+        //string[] items = input.TrimEnd(',').Split(',');
+        //foreach (string item in items)
+        //{
+        //    string[] keyValue = item.Split('=');
+        //    dictionary.Add(keyValue[0], keyValue[1]);
+        //}
+
+}
 }
