@@ -7,8 +7,11 @@ namespace Projekt_TMDB
 {
     public class SQL
     {
+        /// <summary>
+        /// Konfiguracja serwera Azure SQL, SqlConnection powinienien być OK
+        /// Tu podane przykładowe dane
+        /// </summary>
         public static void SqlServer()
-        //Konfiguracja serwera Azure SQL
         {
 
 
