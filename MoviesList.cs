@@ -34,7 +34,7 @@ namespace Projekt_TMDB
         [Name("keywords")]
         public string Tag { get; set; }
         //Summary
-        //Rozdzielanie stringów Company, Genre, Tag na osobne słowniki, relacja klucz główny-klucz obcy z Filmem
+        //Rozdzielanie stringów Company (Genre, Tag raczej do wykomentowania, ale można kombinować z systemem rekomendacji) na osobny słownik, relacja klucz główny-klucz obcy z Filmem (wiele do wielu)
 
         //Dictionary<string, string> dictionary = new Dictionary<string, string>();
         //string[] items = input.TrimEnd(',').Split(',');
