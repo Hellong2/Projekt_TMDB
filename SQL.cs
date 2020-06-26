@@ -8,6 +8,7 @@ namespace Projekt_TMDB
     public class SQL
     {
         public static void SqlServer()
+        //Konfiguracja serwera Azure SQL
         {
 
 

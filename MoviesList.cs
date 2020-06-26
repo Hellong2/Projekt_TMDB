@@ -12,6 +12,9 @@ namespace Projekt_TMDB
 {
     public class MoviesList
     {
+        /// <summary>
+        /// Pokombinować z klasą interface żeby przerzucić te dane, 
+        /// </summary>
         [Name("original_title")]
         public string Title { get; set; }
         [Name("production_companies")]
@@ -30,7 +33,16 @@ namespace Projekt_TMDB
         public string Genre { get; set; }
         [Name("keywords")]
         public string Tag { get; set; }
+        //Summary
+        //Rozdzielanie stringów Company, Genre, Tag na osobne słowniki, relacja klucz główny-klucz obcy z Filmem
 
+        //Dictionary<string, string> dictionary = new Dictionary<string, string>();
+        //string[] items = input.TrimEnd(',').Split(',');
+        //foreach (string item in items)
+        //{
+        //    string[] keyValue = item.Split('=');
+        //    dictionary.Add(keyValue[0], keyValue[1]);
+        //}
         public static List<MoviesList> GetMovies(string fileName)
         {
             List<MoviesList> returnValue = new List<MoviesList>();
@@ -77,21 +89,14 @@ namespace Projekt_TMDB
         //    List<MoviesList> filmy = All.Where(f )
         //    return Value;
         //}
+
+        ///Po zakończonej migracji do SQL dekonstruktor!
         //public ~MoviesList()
         //{
 
         //}
 
-        //Summary
-        //Rozdzielanie stringów Company, Genre, Tag na osobne słowniki, relacja klucz główny-klucz obcy z Filmem
 
-        //Dictionary<string, string> dictionary = new Dictionary<string, string>();
-        //string[] items = input.TrimEnd(',').Split(',');
-        //foreach (string item in items)
-        //{
-        //    string[] keyValue = item.Split('=');
-        //    dictionary.Add(keyValue[0], keyValue[1]);
-        //}
 
 }
 }
