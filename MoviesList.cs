@@ -62,6 +62,9 @@ namespace Projekt_TMDB
             return returnValue;
         }
         private static List<MoviesList> _listaFilmow;
+        /// <summary>
+        /// Czy _listaFilmow.AddRange(movies); jest potrzebne?
+        /// </summary>
         public static List<MoviesList> ListaFilmow
         {
             get
@@ -75,7 +78,11 @@ namespace Projekt_TMDB
                 return _listaFilmow;
             }
         }
-        
+        /// <summary>
+        /// Do wywalenia, służy do testów
+        /// </summary>
+        /// <param name="date"></param>
+        /// <returns></returns>
         public static List<MoviesList> MovieDate(DateTime date)
         {
             return ListaFilmow.Where(p => p.Release == date).
