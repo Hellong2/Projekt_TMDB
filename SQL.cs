@@ -18,10 +18,10 @@ namespace Projekt_TMDB
             try
             {
                 SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                builder.DataSource = "sqlmoviedata1.database.windows.net";
-                builder.UserID = "azureuser";
-                builder.Password = "Dominik12!";
-                builder.InitialCatalog = "myDatabase";
+                builder.DataSource = "........";
+                builder.UserID = ".........";
+                builder.Password = "...........";
+                builder.InitialCatalog = "...........";
 
                 using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
                 {
