@@ -24,7 +24,7 @@ namespace Projekt_TMDB
         //    string[] keyValue = item.Split('=');
         //    dictionary.Add(keyValue[0], keyValue[1]);
         //}
-        public static List<Movie> GetMovies(string fileName)
+        private static List<Movie> GetMovies(string fileName)
         {
             List<Movie> returnValue = new List<Movie>();
             if (File.Exists(fileName))
@@ -55,6 +55,10 @@ namespace Projekt_TMDB
                     _listaFilmow = new List<Movie>();
                     List<Movie> movies = MoviesList.GetMovies(@"E:\Develop\C#\TMDB\Projekt_TMDB\tmdb_5000_movies2.csv");
                     _listaFilmow.AddRange(movies);
+                    foreach (Movie movie in _listaFilmow)
+                    {
+                        movie.DivideString();
+                    }
                 }
                 return _listaFilmow;
             }
