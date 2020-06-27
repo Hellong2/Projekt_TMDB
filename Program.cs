@@ -9,11 +9,11 @@ namespace Projekt_TMDB
         {
            
             
-            List<MoviesList> filmy = MoviesList.GetMovies(@"E:\Develop\C#\TMDB\Projekt_TMDB\tmdb_5000_movies2.csv");
+            List<Movie> filmy = MoviesList.GetMovies(@"E:\Develop\C#\TMDB\Projekt_TMDB\tmdb_5000_movies2.csv");
 
-            List<MoviesList> DzienPremiery = MoviesList.MovieDate(new DateTime(2011, 05, 14));
+            List<Movie> DzienPremiery = MoviesList.MovieDate(new DateTime(2011, 05, 14));
 
-            foreach (MoviesList m in DzienPremiery)
+            foreach (Movie m in DzienPremiery)
             {
                 Console.WriteLine(m.Title);
             }
