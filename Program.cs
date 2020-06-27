@@ -7,14 +7,19 @@ namespace Projekt_TMDB
     {
         static void Main(string[] args)
         {
-
-
-            List<Movie> filmy = MoviesList.ListaFilmow;
+            _ = MoviesList.ListaFilmow;
 
 
             List<Movie> DzienPremiery = MoviesList.MovieDate(new DateTime(2011, 05, 14));
 
             foreach (Movie m in DzienPremiery)
+            {
+                Console.WriteLine(m.Title);
+            }
+
+            List<Movie> Producent = MoviesList.Producer("Weinstein Company, The");
+
+            foreach (Movie m in Producent)
             {
                 Console.WriteLine(m.Title);
             }

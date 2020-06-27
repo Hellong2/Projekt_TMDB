@@ -6,8 +6,21 @@ namespace Projekt_TMDB
 {
     class MovieProcessing
     /// Wszystkie metody zwracające wartości mają znaleźc się tu
-    /// Mają pobierać dane z SQL, nie z csv!!!
     {
+        //Summary
+        //Obliczanie zysku dla każdego filmu (income-budget)
+
+        //public static decimal Profit(string company)
+        //{
+        //    List<MoviesList> filmy = All.Where(f )
+        //    return Value;
+        //}
+
+        ///Po zakończonej migracji do SQL dekonstruktor!
+        //public ~MoviesList()
+        //{
+
+        //}
 
     }
 }

@@ -12,18 +12,6 @@ namespace Projekt_TMDB
 {
     public class MoviesList
     {
-
-
-        //Summary
-        //Rozdzielanie stringów Company (Genre, Tag raczej do wykomentowania, ale można kombinować z systemem rekomendacji) na osobny słownik, relacja klucz główny-klucz obcy z Filmem (wiele do wielu)
-
-        //Dictionary<string, string> dictionary = new Dictionary<string, string>();
-        //string[] items = input.TrimEnd(',').Split(',');
-        //foreach (string item in items)
-        //{
-        //    string[] keyValue = item.Split('=');
-        //    dictionary.Add(keyValue[0], keyValue[1]);
-        //}
         private static List<Movie> GetMovies(string fileName)
         {
             List<Movie> returnValue = new List<Movie>();
@@ -43,9 +31,6 @@ namespace Projekt_TMDB
             return returnValue;
         }
         private static List<Movie> _listaFilmow;
-        /// <summary>
-        /// Czy _listaFilmow.AddRange(movies); jest potrzebne?
-        /// </summary>
         public static List<Movie> ListaFilmow
         {
             get
@@ -73,21 +58,18 @@ namespace Projekt_TMDB
             return ListaFilmow.Where(p => p.Release == date).
                 OrderBy(p => p.Title).ToList();
         }
-        //Summary
-        //Obliczanie zysku dla każdego filmu (income-budget)
-        
-        //public static decimal Profit(string company)
+
+        /// <summary>
+        /// Nie działa, błąd, do rozwiązania
+        /// </summary>
+        /// <param name="producer"></param>
+        /// <returns></returns>
+        //public static List<Movie> Producer(string producer)
         //{
-        //    List<MoviesList> filmy = All.Where(f )
-        //    return Value;
+        //    return ListaFilmow.Select(p => p.Companies
+        //               .Where(n => n.Name == producer)
+        //               .ToList()).ToList();
         //}
-
-        ///Po zakończonej migracji do SQL dekonstruktor!
-        //public ~MoviesList()
-        //{
-
-        //}
-
 
 
 }
