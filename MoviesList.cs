@@ -53,10 +53,14 @@ namespace Projekt_TMDB
         /// </summary>
         /// <param name="date"></param>
         /// <returns></returns>
-        public static List<Movie> MovieDate(DateTime date)
+        public static List<Movie> YearsChoice (DateTime date)
         {
             return ListaFilmow.Where(p => p.Release == date).
                 OrderBy(p => p.Title).ToList();
+        }
+        public static List<Movie> YearsChoice (DateTime date1, DateTime date 2)
+        {
+
         }
 
         /// <summary>
