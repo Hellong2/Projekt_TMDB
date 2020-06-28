@@ -8,6 +8,5 @@ namespace Projekt_TMDB
     /// Wszystkie metody zwracające wartości mają znaleźc się tu
     {
 
-
     }
 }

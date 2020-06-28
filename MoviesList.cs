@@ -53,15 +53,22 @@ namespace Projekt_TMDB
         /// </summary>
         /// <param name="date"></param>
         /// <returns></returns>
-        public static List<Movie> YearsChoice (DateTime date)
+        public static List<Movie> YearsChoice (DateTime startDate, DateTime endDate)
         {
-            return ListaFilmow.Where(p => p.Release == date).
-                OrderBy(p => p.Title).ToList();
+            return ListaFilmow.Where(p => p.Release >= startDate && p.Release <= endDate).
+                OrderBy(p => p.Release).ToList();
         }
-        //public static List<Movie> YearsChoice (DateTime date1, DateTime date 2)
-        //{
-
-        //}
+        /// <summary>
+        /// Zwraca tylko wartości 7, nie rozumiem za bardzo dlaczego
+        /// </summary>
+        /// <param name="grade"></param>
+        /// <param name="ammount"></param>
+        /// <returns></returns>
+        public static List<Movie> BestMovies (int grade, int ammount)
+        {
+            return ListaFilmow.Where(p => p.Rating >= grade && p.Votes > 500).
+                OrderBy(p => p.Rating).Take(ammount).ToList();
+        }
 
 
         //public static List<Movie> Producer(string producer)
