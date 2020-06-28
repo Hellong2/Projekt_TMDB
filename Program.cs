@@ -16,10 +16,13 @@ namespace Projekt_TMDB
             Console.WriteLine("Wpisz: Najlepsze filmy/Dochodowe filmy/Producenci: \n");
             string answer = Console.ReadLine();
             Console.WriteLine(@"Wybierz okres jaki cię interesuje
-                                    -może to być rok lub lata (xxxx, xxxx)
-                                    -może to być miesiąc lub okres pomiędzy miesiącami (xxxx.xx, xxxx.xx): ");
-            string daty = Console.ReadLine();
-            Console.WriteLine("Wybierz, ile wyników chciałbyś wyświetlić (domyślnie 10): \n")
+                                    -może to być rok lub lata (xxxx, xxxx)");
+            string data1 = Console.ReadLine();
+
+
+            DateTime data2 = DateTime.Parse(Console.ReadLine());
+
+            Console.WriteLine("Wybierz, ile wyników chciałbyś wyświetlić (domyślnie 10): \n");
                 //int quantity = TryParse()
             do
             {

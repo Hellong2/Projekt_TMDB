@@ -58,23 +58,22 @@ namespace Projekt_TMDB
             return ListaFilmow.Where(p => p.Release == date).
                 OrderBy(p => p.Title).ToList();
         }
-        public static List<Movie> YearsChoice (DateTime date1, DateTime date 2)
-        {
-
-        }
-
-        /// <summary>
-        /// Nie działa, błąd, do rozwiązania
-        /// </summary>
-        /// <param name="producer"></param>
-        /// <returns></returns>
-        //public static List<Movie> Producer(string producer)
+        //public static List<Movie> YearsChoice (DateTime date1, DateTime date 2)
         //{
-        //    return ListaFilmow.Select(p => p.Companies
-        //               .Where(n => n.Name == producer)
-        //               .ToList()).ToList();
+
         //}
 
 
-}
+        //public static List<Movie> Producer(string producer)
+        //{
+        //    List<Movie> movies = new List<Movie>();
+        //    foreach (Movie film in _listaFilmow)
+        //    {
+
+        //    }
+
+        //}
+
+
+    }
 }

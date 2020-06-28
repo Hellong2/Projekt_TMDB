@@ -4,23 +4,23 @@ using System.Text;
 
 namespace Projekt_TMDB
 {
-    class MovieProcessing
+    public static class MovieProcessing
     /// Wszystkie metody zwracające wartości mają znaleźc się tu
     {
-        //Summary
-        //Obliczanie zysku dla każdego filmu (income-budget)
+        public static DateTime YearToDatetimeStart (string Year)
+        {
 
-        //public static decimal Profit(string company)
-        //{
-        //    List<MoviesList> filmy = All.Where(f )
-        //    return Value;
-        //}
-
-        ///Po zakończonej migracji do SQL dekonstruktor!
-        //public ~MoviesList()
-        //{
-
-        //}
+            try
+            {
+                DateTime inputtedYear = new DateTime(int.Parse(Year), 01, 01);
+                return inputtedYear;
+            }
+            catch
+            {
+                Console.WriteLine("To nie jest Rok!");
+            }
+                            
+        }
 
     }
 }
