@@ -48,11 +48,7 @@ namespace Projekt_TMDB
                 return _listaFilmow;
             }
         }
-        /// <summary>
-        /// Do wywalenia, służy do testów
-        /// </summary>
-        /// <param name="date"></param>
-        /// <returns></returns>
+
         public static List<Movie> YearsChoice (DateTime startDate, DateTime endDate)
         {
             if (startDate > endDate)
@@ -61,15 +57,9 @@ namespace Projekt_TMDB
                 startDate = endDate;
                 endDate = tempDate;
             }
-            return ListaFilmow.Where(p => p.Release >= startDate && p.Release <= endDate).
-                OrderBy(p => p.Release).ToList();
+            return ListaFilmow.Where(p => p.Release >= startDate && p.Release <= endDate).ToList();
         }
-        /// <summary>
-        /// Zwraca tylko wartości 7, nie rozumiem za bardzo dlaczego
-        /// </summary>
-        /// <param name="grade"></param>
-        /// <param name="ammount"></param>
-        /// <returns></returns>
+
         public static List<Movie> BestMovies (int grade, int ammount)
         {
             return ListaFilmow.Where(p => p.Rating >= grade && p.Votes > 500).
