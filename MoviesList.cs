@@ -60,7 +60,7 @@ namespace Projekt_TMDB
             return list.Where(p => p.Release >= startDate && p.Release <= endDate).ToList<Movie>();
         }
 
-        public static List<Movie> BestMovies (List<Movie> list, int grade, int ammount)
+        public static List<Movie> BestMovies (List<Movie> list, int ammount, int grade = 0)
         {
             return list.Where(p => p.Rating >= grade && p.Votes > 500).
                 OrderByDescending(p => p.Rating).Take(ammount).ToList<Movie>();

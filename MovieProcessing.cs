@@ -11,12 +11,12 @@ namespace Projekt_TMDB
         {
             List<Movie> filmy = MoviesList.ListaFilmow;
 
-            List<Movie> NajlepszeFilmy = MoviesList.BestMovies(filmy, 7, 10);
+            //List<Movie> NajlepszeFilmy = MoviesList.BestMovies(filmy, 7, 10);
 
-            foreach (Movie m in NajlepszeFilmy)
-            {
-                Console.WriteLine(m.Title.PadRight(60, ' ') + " " + m.Rating);
-            }
+            //foreach (Movie m in NajlepszeFilmy)
+            //{
+            //    Console.WriteLine(m.Title.PadRight(60, ' ') + " " + m.Rating);
+            //}
 
             Console.WriteLine("Witaj w becie programu przetwarzającego Bazę filmów TMDB. Wpisz:");
             Console.WriteLine("Najlepsze filmy (Aby wyświetlić najlepsze filmy z wybranego przez ciebie okresu),");
@@ -39,13 +39,25 @@ namespace Projekt_TMDB
                 endYear = new DateTime(int.Parse(data2), 12, 31);
             }
 
-            Console.WriteLine("Wybierz, ile wyników chciałbyś wyświetlić (domyślnie 10): \n");
-            int ammount = int.Parse(Console.ReadLine());
+
+
 
 
             switch (answer)
             {
                 case "Najlepsze filmy":
+                    Console.WriteLine("Wybierz, ile wyników chciałbyś wyświetlić (domyślnie 10): \n");
+                    int ammount = 10;
+                    string tempAmmount = Console.ReadLine();
+                    if (tempAmmount != "")
+                        ammount = int.Parse(tempAmmount);
+
+                    List<Movie> NajlepszeFilmy = MoviesList.BestMovies(MoviesList.YearsChoice(filmy, startYear, endYear), ammount);
+
+                    foreach (Movie m in NajlepszeFilmy)
+                    {
+                        Console.WriteLine(m.Title.PadRight(60, ' ') + " " + m.Rating);
+                    }
                     break;
                 case "Dochodowe filmy":
                     break;
@@ -60,12 +72,12 @@ namespace Projekt_TMDB
 
 
 
-            List<Movie> DzienPremiery = MoviesList.YearsChoice(filmy, startYear, endYear);
+            //List<Movie> DzienPremiery = MoviesList.YearsChoice(filmy, startYear, endYear);
 
-            foreach (Movie m in DzienPremiery)
-            {
-                Console.WriteLine(m.Title.PadRight(60, ' ') + " " + m.Release.ToString("yyyy-MM-dd"));
-            }
+            //foreach (Movie m in DzienPremiery)
+            //{
+            //    Console.WriteLine(m.Title.PadRight(60, ' ') + " " + m.Release.ToString("yyyy-MM-dd"));
+            //}
 
             //List<Movie> Producent = MoviesList.Producer("Weinstein Company, The");
 

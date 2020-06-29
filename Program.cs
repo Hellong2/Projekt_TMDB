@@ -7,14 +7,14 @@ namespace Projekt_TMDB
     {
         static void Main(string[] args)
         {
-            List<Movie> filmy = MoviesList.ListaFilmow;
+            //List<Movie> filmy = MoviesList.ListaFilmow;
 
 
-            //MovieProcessing.MainInstance();
+            MovieProcessing.MainInstance();
 
-            filmy = MoviesList.Producer(filmy, "Weinstein Company, The");
+            //filmy = MoviesList.Producer(filmy, "Weinstein Company, The");
 
-            Console.WriteLine(MoviesList.TotalIncome(filmy));
+            //Console.WriteLine(MoviesList.TotalIncome(filmy));
 
             Console.ReadKey();
 
