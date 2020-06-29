@@ -79,12 +79,7 @@ namespace Projekt_TMDB
 
         //public static List<Movie> Producer(string producer)
         //{
-        //    List<Movie> movies = new List<Movie>();
-        //    foreach (Movie film in _listaFilmow)
-        //    {
-
-        //    }
-
+        //    return ListaFilmow.Where()
         //}
 
 
