@@ -82,6 +82,10 @@ namespace Projekt_TMDB
         {
             return list.OrderByDescending(p => p.Revenue).Take(ammount).ToList<Movie>();
         }
+        //public static List<Movie> MostProfitableProducers (List<Movie> list, int ammount)
+        //{
+        //    return list.Where(p => p.Companies.GroupBy(x => x.Id).Select(p => p.OrderByDescending(y => (y.);
+        //}
 
 
     }

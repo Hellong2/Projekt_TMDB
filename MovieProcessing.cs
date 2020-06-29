@@ -20,7 +20,7 @@ namespace Projekt_TMDB
             string answer = Console.ReadLine();
 
             Console.WriteLine("Wybierz okres jaki cię interesuje");
-            Console.WriteLine("-może to być rok lub lata (xxxx). Zostaw pustą drugą linię, jeśli chcesz dane tylko z jednego roku");
+            Console.WriteLine("-może to być rok lub lata (xxxx). Zostaw pustą drugą linię, jeśli chcesz dane tylko z jednego roku.");
             Console.Write("Podaj rok początkowy: ");
 
             string data1 = Console.ReadLine();
@@ -53,7 +53,7 @@ namespace Projekt_TMDB
 
                     foreach (Movie m in NajlepszeFilmy)
                     {
-                        Console.WriteLine(m.Title.PadRight(60, ' ') + " " + m.Rating);
+                        Console.WriteLine(m.Title.PadRight(70, ' ') + " " + m.Rating);
                     }
                     break;
                 case "Dochodowe filmy":
@@ -63,7 +63,7 @@ namespace Projekt_TMDB
 
                     foreach(Movie m in DochodoweFilmy)
                     {
-                        Console.WriteLine(m.Title.PadRight(60, ' ') + " " + m.Rating);
+                        Console.WriteLine(m.Title.PadRight(70, ' ') + " " + m.Rating + "   " + string.Format("{0:N}", m.Revenue) + " $");
                     }
                     break;
                 case "Producenci":
@@ -71,7 +71,7 @@ namespace Projekt_TMDB
                     string wytwornia = Console.ReadLine();
 
                     decimal zyskNetto = MoviesList.TotalIncome(MoviesList.Producer(MoviesList.YearsChoice(filmy, startYear, endYear), wytwornia));
-                    Console.WriteLine($"Wytwórnia filmowa {wytwornia} zarobiła w okresie ({startYear.ToString("yyyy-MM-dd")}) - ({endYear.ToString("yyyy-MM-dd")}) {string.Format("{0:N}", zyskNetto)} $.");
+                    Console.WriteLine($"Wytwórnia filmowa {wytwornia} zarobiła w okresie ({startYear:yyyy-MM-dd})-({endYear:yyyy-MM-dd}) {string.Format("{0:N}", zyskNetto)} $.");
 
                     break;
                 default:
