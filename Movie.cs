@@ -25,14 +25,14 @@ namespace Projekt_TMDB
         public decimal Rating { get; set; }
         [Name("vote_count")]
         public decimal Votes { get; set; }
+        public List<Company> Companies { get; set; }
 
-        /*Tu można zaprogramować system rekomendacji
-         * Zasada podobna jak w iteracji po firmach (companies)
+
+
         //[Name("genres")]
         //public string Genre { get; set; }
         //[Name("keywords")]
-        //public string Tag { get; set; }*/
-        public List<Company> Companies { get; set; }
+        //public string Tag { get; set; }
 
         public Movie()
         {

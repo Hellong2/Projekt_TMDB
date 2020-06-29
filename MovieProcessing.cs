@@ -9,7 +9,9 @@ namespace Projekt_TMDB
     {
         public static void MainInstance()
         {
-            List<Movie> NajlepszeFilmy = MoviesList.BestMovies(7, 10);
+            List<Movie> filmy = MoviesList.ListaFilmow;
+
+            List<Movie> NajlepszeFilmy = MoviesList.BestMovies(filmy, 7, 10);
 
             foreach (Movie m in NajlepszeFilmy)
             {
@@ -58,7 +60,7 @@ namespace Projekt_TMDB
 
 
 
-            List<Movie> DzienPremiery = MoviesList.YearsChoice(startYear, endYear);
+            List<Movie> DzienPremiery = MoviesList.YearsChoice(filmy, startYear, endYear);
 
             foreach (Movie m in DzienPremiery)
             {

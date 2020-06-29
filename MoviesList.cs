@@ -49,7 +49,7 @@ namespace Projekt_TMDB
             }
         }
 
-        public static List<Movie> YearsChoice (DateTime startDate, DateTime endDate)
+        public static List<Movie> YearsChoice (List<Movie> list,DateTime startDate, DateTime endDate)
         {
             if (startDate > endDate)
             {
@@ -57,21 +57,27 @@ namespace Projekt_TMDB
                 startDate = endDate;
                 endDate = tempDate;
             }
-            return ListaFilmow.Where(p => p.Release >= startDate && p.Release <= endDate).ToList();
+            return list.Where(p => p.Release >= startDate && p.Release <= endDate).ToList<Movie>();
         }
 
-        public static List<Movie> BestMovies (int grade, int ammount)
+        public static List<Movie> BestMovies (List<Movie> list, int grade, int ammount)
         {
-            return ListaFilmow.Where(p => p.Rating >= grade && p.Votes > 500).
-                OrderByDescending(p => p.Rating).Take(ammount).ToList();
+            return list.Where(p => p.Rating >= grade && p.Votes > 500).
+                OrderByDescending(p => p.Rating).Take(ammount).ToList<Movie>();
         }
 
 
-        //public static List<Movie> Producer(string producer)
-        //{
-        //    return ListaFilmow.Where()
-        //}
+        public static List<Movie> Producer(List<Movie> list, string producer)
+        {
+            return list.Where(p => p.Companies.Any(x => x.Name == producer)).ToList<Movie>();
+        }
 
+        public static decimal TotalIncome(List<Movie> list)
+        {
+            decimal totalRevenue = list.Sum(p => p.Revenue);
+            decimal totalBudget = list.Sum(p => p.Budget);
+            return totalRevenue - totalBudget;
+        }
 
     }
 }
