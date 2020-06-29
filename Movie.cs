@@ -74,5 +74,7 @@ namespace Projekt_TMDB
                 Companies.Add(JsonSerializer.Deserialize<Company>(jsonString));
             }
         }
+
+
     }
 }

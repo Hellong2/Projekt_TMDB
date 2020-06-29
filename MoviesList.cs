@@ -60,9 +60,9 @@ namespace Projekt_TMDB
             return list.Where(p => p.Release >= startDate && p.Release <= endDate).ToList<Movie>();
         }
 
-        public static List<Movie> BestMovies (List<Movie> list, int ammount, int grade = 0)
+        public static List<Movie> BestMovies (List<Movie> list, int ammount)
         {
-            return list.Where(p => p.Rating >= grade && p.Votes > 500).
+            return list.Where(p => p.Votes > 500).
                 OrderByDescending(p => p.Rating).Take(ammount).ToList<Movie>();
         }
 
@@ -78,6 +78,11 @@ namespace Projekt_TMDB
             decimal totalBudget = list.Sum(p => p.Budget);
             return totalRevenue - totalBudget;
         }
+        public static List<Movie> MostProfitableMovies (List<Movie> list, int ammount)
+        {
+            return list.OrderByDescending(p => p.Revenue).Take(ammount).ToList<Movie>();
+        }
+
 
     }
 }
