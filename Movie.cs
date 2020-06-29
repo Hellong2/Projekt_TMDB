@@ -27,8 +27,6 @@ namespace Projekt_TMDB
         public decimal Votes { get; set; }
         public List<Company> Companies { get; set; }
 
-
-
         //[Name("genres")]
         //public string Genre { get; set; }
         //[Name("keywords")]
@@ -63,8 +61,6 @@ namespace Projekt_TMDB
                 }
             }
             return result;
-
-
         }
         public void DivideString()
         {
@@ -74,7 +70,5 @@ namespace Projekt_TMDB
                 Companies.Add(JsonSerializer.Deserialize<Company>(jsonString));
             }
         }
-
-
     }
 }

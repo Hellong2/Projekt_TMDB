@@ -5,18 +5,11 @@ using System.Text;
 namespace Projekt_TMDB
 {
     public static class MovieProcessing
-    /// Wszystkie metody zwracające wartości mają znaleźc się tu
+
     {
         public static void MainInstance()
         {
             List<Movie> filmy = MoviesList.ListaFilmow;
-
-            //List<Movie> NajlepszeFilmy = MoviesList.BestMovies(filmy, 7, 10);
-
-            //foreach (Movie m in NajlepszeFilmy)
-            //{
-            //    Console.WriteLine(m.Title.PadRight(60, ' ') + " " + m.Rating);
-            //}
 
             Console.WriteLine("Witaj w becie programu przetwarzającego Bazę filmów TMDB. Wpisz:");
             Console.WriteLine("Najlepsze filmy (Aby wyświetlić najlepsze filmy z wybranego przez ciebie okresu),");
@@ -86,22 +79,6 @@ namespace Projekt_TMDB
                     check = true;
                     break;
             }
-
-
-
-            //List<Movie> DzienPremiery = MoviesList.YearsChoice(filmy, startYear, endYear);
-
-            //foreach (Movie m in DzienPremiery)
-            //{
-            //    Console.WriteLine(m.Title.PadRight(60, ' ') + " " + m.Release.ToString("yyyy-MM-dd"));
-            //}
-
-            //List<Movie> Producent = MoviesList.Producer("Weinstein Company, The");
-
-            //foreach (Movie m in Producent)
-            //{
-            //    Console.WriteLine(m.Title);
-            //}
         }
     }
 }
