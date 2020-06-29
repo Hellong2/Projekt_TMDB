@@ -8,12 +8,12 @@ namespace Projekt_TMDB
         static void Main(string[] args)
         {
 
-            //List<Movie> NajlepszeFilmy = MoviesList.BestMovies(7, 10);
+            List<Movie> NajlepszeFilmy = MoviesList.BestMovies(7, 10);
 
-            //foreach (Movie m in NajlepszeFilmy)
-            //{
-            //    Console.WriteLine(m.Title.PadRight(60, ' ') + " " + m.Rating);
-            //}
+            foreach (Movie m in NajlepszeFilmy)
+            {
+                Console.WriteLine(m.Title.PadRight(60, ' ') + " " + m.Rating);
+            }
 
             Console.WriteLine("Witaj w becie programu przetwarzającego Bazę filmów TMDB. Możesz:");
             Console.WriteLine("- Wyświetlić najlepsze filmy z wybranego przez ciebie okresu,");

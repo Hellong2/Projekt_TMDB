@@ -55,6 +55,12 @@ namespace Projekt_TMDB
         /// <returns></returns>
         public static List<Movie> YearsChoice (DateTime startDate, DateTime endDate)
         {
+            if (startDate > endDate)
+            {
+                DateTime tempDate = startDate;
+                startDate = endDate;
+                endDate = tempDate;
+            }
             return ListaFilmow.Where(p => p.Release >= startDate && p.Release <= endDate).
                 OrderBy(p => p.Release).ToList();
         }
@@ -67,7 +73,7 @@ namespace Projekt_TMDB
         public static List<Movie> BestMovies (int grade, int ammount)
         {
             return ListaFilmow.Where(p => p.Rating >= grade && p.Votes > 500).
-                OrderBy(p => p.Rating).Take(ammount).ToList();
+                OrderByDescending(p => p.Rating).Take(ammount).ToList();
         }
 
 
